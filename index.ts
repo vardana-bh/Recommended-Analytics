@@ -182,20 +182,7 @@ import {
     );
   }
   
-  function finalToCall(optimizedHierarchy: Array<INodeMetaAssociationInfo>) {
-    const analyticsApplicableAtAssociated = filterUsingCompatibleAssetType(
-      test_analytics,
-      fetchMetaNodesData(
-        getUniqueList([
-          '63625b1d-e5bf-4062-88a2-c839e6065d8e',
-          '6a872b6d-8c92-4edf-a2df-0359b0d16a50',
-        ]),
-        optimizedHierarchy
-      ),
-      filterMap,
-      optimizedHierarchy
-    );
-    console.log(analyticsApplicableAtAssociated);
+  function finalToCall(analyticsApplicableAtAssociated: Array<IRecommenedAnalytics>, optimizedHierarchy: Array<INodeMetaAssociationInfo>) { 
     const analyticsApplicableAt: Array<IRecommenedAnalytics> =
       analyticsApplicableAtAssociated.reduce(
         (
@@ -250,5 +237,28 @@ import {
     return analyticsApplicableAt;
   }
   
-//   console.log('filterUsingCompatibleAssetType', finalToCall(opptt));
+
+// Enter the APM train id on which the logic should run;
+const uniqueApmTrainIds: Array<string> = getUniqueList([
+    '63625b1d-e5bf-4062-88a2-c839e6065d8e',
+    '6a872b6d-8c92-4edf-a2df-0359b0d16a50',
+  ]) 
+
+const firstLevelCompatibleAssetFilter: Array<IRecommenedAnalytics> = filterUsingCompatibleAssetType(
+    test_analytics,
+    fetchMetaNodesData(
+      uniqueApmTrainIds,
+      opptt
+    ),
+    filterMap,
+    opptt
+  );
+
+console.log('firstLevelCompatibleAssetFilter: ', firstLevelCompatibleAssetFilter);
+
+
+const finalFilteredRecommendedAnalytics: Array<IRecommenedAnalytics> = finalToCall(firstLevelCompatibleAssetFilter, opptt);
+
+console.log('filterUsingCompatibleAssetType: ', finalFilteredRecommendedAnalytics);
+
   
