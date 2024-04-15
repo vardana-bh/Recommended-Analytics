@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "commonjs",
+      "target": "esnext",
+      "allowJs": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true
+    },
+    "include": ["./**.*", "./**.json"],
+    "exclude": ["./**.txt"]
+  }

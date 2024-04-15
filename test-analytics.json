@@ -1,0 +1,581 @@
+[
+    {
+      "info": {
+        "desc": "Extractions for Heat Exchanger",
+        "image": "",
+        "version": "2.0",
+        "category": "Extractions",
+        "appliedAt": ["ApmBearing"],
+        "artifactPath": "",
+        "supportedOps": ["inference"],
+        "compatibleAssetTypes": ["*"]
+      },
+      "inputOutputList": {
+        "commonInputSet": {
+          "inputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "TIME.TOLERANCE",
+                "unit": "s",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "int",
+                "tracePath": "traceAbove",
+                "attributes": ["optional", "global"],
+                "description": "Allowable Time Difference Between Measurements"
+              },
+              {
+                "name": "HOT_DENSITY",
+                "unit": "kg/m³",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Hot Side Fluid Density"
+              },
+              {
+                "name": "CLD_DENSITY",
+                "unit": "kg/m³",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Cold Side Fluid Density"
+              },
+              {
+                "name": "HOT_CP",
+                "unit": "J/kg*K",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Hot Side Fluid Specific Heat"
+              },
+              {
+                "name": "CLD_CP",
+                "unit": "J/kg*K",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Cold Side Fluid Specific Heat"
+              },
+              {
+                "name": "HOT_INLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Hot Side Inlet Temperature"
+              },
+              {
+                "name": "HOT_OUTLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Hot Side Outlet Temperature"
+              },
+              {
+                "name": "CLD_INLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Cold Side Inlet Temperature"
+              },
+              {
+                "name": "CLD_OUTLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Cold Side Outlet Temperature"
+              },
+              {
+                "name": "HOT_FLOW",
+                "unit": "m³/s",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Hot Side Flow"
+              },
+              {
+                "name": "CLD_FLOW",
+                "unit": "m³/s",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Cold Side Flow"
+              }
+            ]
+          },
+          "outputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "LMTD",
+                "unit": "K",
+                "datatype": "float",
+                "description": "Log Mean Temp Difference"
+              },
+              {
+                "name": "CLD_FLOW.RATIO",
+                "unit": "None",
+                "datatype": "float",
+                "description": "Cold Side Flow Ratio"
+              },
+              {
+                "name": "HOT_FLOW.RATIO",
+                "unit": "None",
+                "datatype": "float",
+                "description": "Hot Side Flow Ratio"
+              }
+            ]
+          }
+        }
+      },
+      "id": "8057e099-7971-41ca-96cb-89f17aeb6aa2",
+      "name": "heex",
+      "displayName": "Extractions - Heat Exchanger",
+      "insightPakVersion": "03.00.02",
+      "createdBy": "admin@bakerhughes.com",
+      "createdOn": "2023-06-16T18:18:04.184Z",
+      "modifiedBy": null,
+      "modifiedOn": null
+    },
+    {
+      "info": {
+        "desc": "Extractions for Heat Exchanger",
+        "image": "",
+        "version": "2.0",
+        "category": "Extractions",
+        "appliedAt": ["ApmCentrifugalPump"],
+        "artifactPath": "",
+        "supportedOps": ["inference"],
+        "compatibleAssetTypes": ["ApmCentrifugalPump"]
+      },
+      "inputOutputList": {
+        "commonInputSet": {
+          "inputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "TIME.TOLERANCE",
+                "unit": "sec",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "int",
+                "tracePath": "traceAbove",
+                "attributes": ["optional", "global"],
+                "description": "Allowable Time Difference Between Measurements"
+              },
+              {
+                "name": "HOT_DENSITY",
+                "unit": "kg/m^3",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Hot Side Fluid Density"
+              },
+              {
+                "name": "CLD_DENSITY",
+                "unit": "kg/m^3",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Cold Side Fluid Density"
+              },
+              {
+                "name": "HOT_CP",
+                "unit": "J/(kg*k)",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Hot Side Fluid Specific Heat"
+              },
+              {
+                "name": "CLD_CP",
+                "unit": "J/(kg*k)",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Cold Side Fluid Specific Heat"
+              },
+              {
+                "name": "HOT_INLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Hot Side Inlet Temperature"
+              },
+              {
+                "name": "HOT_OUTLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Hot Side Outlet Temperature"
+              },
+              {
+                "name": "CLD_INLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Cold Side Inlet Temperature"
+              },
+              {
+                "name": "CLD_OUTLT.TEMP",
+                "unit": "K",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Cold Side Outlet Temperature"
+              },
+              {
+                "name": "HOT_FLOW",
+                "unit": "m^3/s",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Hot Side Flow"
+              },
+              {
+                "name": "CLD_FLOW",
+                "unit": "m^3/s",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Cold Side Flow"
+              }
+            ]
+          },
+          "outputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "LMTD",
+                "unit": "K-delta",
+                "datatype": "float",
+                "description": "Log Mean Temp Difference"
+              },
+              {
+                "name": "CLD_FLOW.RATIO",
+                "unit": "",
+                "datatype": "float",
+                "description": "Cold Side Flow Ratio"
+              },
+              {
+                "name": "HOT_FLOW.RATIO",
+                "unit": "",
+                "datatype": "float",
+                "description": "Hot Side Flow Ratio"
+              }
+            ]
+          }
+        }
+      },
+      "id": "ef1f1823-246f-4871-a634-2ed33e8c6f9e",
+      "name": "heex",
+      "displayName": "Extractions - Heat Exchanger",
+      "insightPakVersion": "03.00.01",
+      "createdBy": "admin@bakerhughes.com",
+      "createdOn": "2023-06-15T09:20:38.147Z",
+      "modifiedBy": null,
+      "modifiedOn": null
+    },
+    {
+      "info": {
+        "desc": "Extractions for Control Valve",
+        "image": "",
+        "version": "2.0",
+        "category": "Extractions",
+        "appliedAt": ["ApmBearing"],
+        "artifactPath": "",
+        "supportedOps": ["inference"],
+        "compatibleAssetTypes": ["ApmAcMotor"]
+      },
+      "inputOutputList": {
+        "commonInputSet": {
+          "inputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "TIME.TOLERANCE",
+                "unit": "s",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "int",
+                "tracePath": "traceAbove",
+                "attributes": ["optional", "global"],
+                "description": "Allowable time difference between measurements"
+              },
+              {
+                "name": "DIFF.LMT",
+                "unit": "% open",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": ["optional"],
+                "description": "Valve feedback to Demand Difference Limit"
+              },
+              {
+                "name": "POS",
+                "unit": "% open",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Valve Position"
+              },
+              {
+                "name": "DMD",
+                "unit": "% open",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "float",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Valve Demand"
+              }
+            ]
+          },
+          "outputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "POS.RATIO",
+                "unit": "None",
+                "datatype": "float",
+                "description": "Valve Position Ratio"
+              },
+              {
+                "name": "POS.DMD.TDER",
+                "unit": "None",
+                "datatype": "float",
+                "description": "time derivative of (position-demand)"
+              }
+            ]
+          }
+        }
+      },
+      "id": "7ec5ac2c-5f20-48f1-ade5-e82d6e35bd4c",
+      "name": "vlex",
+      "displayName": "Extractions - Control Valve",
+      "insightPakVersion": "03.00.03",
+      "createdBy": "admin@bakerhughes.com",
+      "createdOn": "2023-06-16T22:31:37.860Z",
+      "modifiedBy": null,
+      "modifiedOn": null
+    },
+    {
+      "info": {
+        "desc": "Extractions for Electric Motor",
+        "image": "",
+        "version": "2.0",
+        "category": "Extractions",
+        "appliedAt": ["ApmTrain"],
+        "artifactPath": "",
+        "supportedOps": ["inference"],
+        "compatibleAssetTypes": []
+      },
+      "inputOutputList": {
+        "commonInputSet": {
+          "inputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "TIME.TOLERANCE",
+                "unit": "s",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "int",
+                "tracePath": "traceAbove",
+                "attributes": ["optional", "global"],
+                "description": "Allowable time difference between measurements"
+              },
+              {
+                "name": "AIR.GAP.THRSHLD",
+                "unit": "mil",
+                "source": "property",
+                "subUnit": "pp",
+                "datatype": "double",
+                "tracePath": "traceAbove",
+                "attributes": ["optional"],
+                "description": "airgap threshold"
+              },
+              {
+                "name": "LINE.FREQ",
+                "unit": "Hz",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "double",
+                "tracePath": "traceAbove",
+                "attributes": ["optional"],
+                "description": "Motor Frequency"
+              },
+              {
+                "name": "RATED.SPEED",
+                "unit": "rpm",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "double",
+                "tracePath": "traceAbove",
+                "attributes": ["optional"],
+                "description": "design speed"
+              },
+              {
+                "name": "NO.POLES",
+                "unit": "None",
+                "source": "property",
+                "subUnit": "",
+                "datatype": "double",
+                "tracePath": "traceAbove",
+                "attributes": ["optional"],
+                "description": "number of poles"
+              },
+              {
+                "name": "MIN.AMP.SETPT",
+                "unit": "mil",
+                "source": "property",
+                "subUnit": "pp",
+                "datatype": "double",
+                "tracePath": "traceAbove",
+                "attributes": ["optional"],
+                "description": "min amplitude setpoint"
+              },
+              {
+                "name": "V_NON.UNFR.AIRGAP",
+                "unit": "mil",
+                "source": "tag",
+                "subUnit": "pp",
+                "datatype": "double",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Vertical Non-Uniform Airgap SB"
+              },
+              {
+                "name": "H_NON.UNFR.AIRGAP",
+                "unit": "mil",
+                "source": "tag",
+                "subUnit": "pp",
+                "datatype": "double",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Horizontal Non-Uniform Airgap SB"
+              },
+              {
+                "name": "V_1X.AMP",
+                "unit": "mil",
+                "source": "tag",
+                "subUnit": "pp",
+                "datatype": "double",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Bearing Vertical 1X"
+              },
+              {
+                "name": "H_1X.AMP",
+                "unit": "mil",
+                "source": "tag",
+                "subUnit": "pp",
+                "datatype": "double",
+                "tracePath": "traceBelow",
+                "attributes": [],
+                "description": "Bearing Horizontal 1X"
+              },
+              {
+                "name": "SPEED",
+                "unit": "rpm",
+                "source": "tag",
+                "subUnit": "",
+                "datatype": "double",
+                "tracePath": "traceAbove",
+                "attributes": [],
+                "description": "Machine Speed"
+              }
+            ]
+          },
+          "outputs": {
+            "dynamic": [],
+            "standard": [
+              {
+                "name": "V_NON.UNFR.AIRGAP.RATIO.MIN",
+                "unit": "None",
+                "datatype": "double",
+                "description": "Vertical electric motor non-uniform airgap ratio min"
+              },
+              {
+                "name": "V_NON.UNFR.AIRGAP.RATIO.MAX",
+                "unit": "None",
+                "datatype": "double",
+                "description": "Vertical  electric motor non-uniform airgap ratio max"
+              },
+              {
+                "name": "H_NON.UNFR.AIRGAP.RATIO.MIN",
+                "unit": "None",
+                "datatype": "double",
+                "description": "Horizontal electric motor non-uniform airgap ratio min"
+              },
+              {
+                "name": "H_NON.UNFR.AIRGAP.RATIO.MAX",
+                "unit": "None",
+                "datatype": "double",
+                "description": "Horizontal electric motor non-uniform airgap ratio max"
+              }
+            ]
+          }
+        }
+      },
+      "id": "add286e7-a1c1-4776-8471-c66bb1f88d90",
+      "name": "mtde",
+      "displayName": "Extractions - Electric Motor",
+      "insightPakVersion": "02.00.03",
+      "createdBy": "admin@bakerhughes.com",
+      "createdOn": "2023-06-16T22:31:46.809Z",
+      "modifiedBy": null,
+      "modifiedOn": null
+    }
+  ]
+  

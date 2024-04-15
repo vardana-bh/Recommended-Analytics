@@ -1,0 +1,19 @@
+[
+    {
+      "baseType": "ApmBearing",
+      "subTypes": ["ApmFfbBearing"]
+    },
+    {
+      "baseType": "ApmStage",
+      "subTypes": []
+    },
+    {
+      "baseType": "ApmCentrifugalPump",
+      "subTypes": []
+    },
+    {
+      "baseType": "ApmMachine",
+      "subTypes": ["ApmMotor", "ApmPump"]
+    }
+  ]
+  
